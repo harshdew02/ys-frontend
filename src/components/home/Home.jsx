@@ -3,7 +3,7 @@ import Appbar from './Appbar';
 import Navbar from './Navbar';
 import Cards from './Cards';
 import NearYou from './NearYou';
-import Docarray from './Docarray';
+import Mentarray from './Mentarray';
 import Footer from './Footer';
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
     </div>
     <Cards/>
     <NearYou/>
-    <Docarray/> 
+    <Mentarray/> 
      <Footer/> 
     </div>
     </>

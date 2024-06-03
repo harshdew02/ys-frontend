@@ -53,7 +53,7 @@ export default function SignUp() {
       // Proceed with signup logic here
       try {
         let url = "http://localhost:3000/signup"
-        checked == true ? url = "http://localhost:3000/doctor/signup" : url = "http://localhost:3000/signup"
+        checked == true ? url = "http://localhost:3000/mentor/signup" : url = "http://localhost:3000/signup"
         
         axios
           .post(url, {
@@ -66,8 +66,8 @@ export default function SignUp() {
             //Logic of successful signup should be shown here/ or reroute to home page as soon as signup is completed
             const token = response.data;
             console.log(token);
-            localStorage.setItem('doctor',checked);
-            checked == true ? window.location.href = './Doctor-Profile' : window.location.href = './home'
+            localStorage.setItem('mentor',checked);
+            checked == true ? window.location.href = './Mentor-Profile' : window.location.href = './home'
             storeToken(token.token);
             // window.location.href = "/home";
           });

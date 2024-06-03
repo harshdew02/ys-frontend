@@ -3,7 +3,7 @@ import { Button, Popover, Rating, Stack, Typography } from "@mui/material";
 import Reviews from "./Reviews";
 import Booking from "../Booking/Booking";
 
-const DocProf = () => {
+const MentProf = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -54,7 +54,7 @@ const DocProf = () => {
                 variant="contained"
                 href="#contained-buttons"
 
-                onClick={()=>{window.location.href = '/Book-your-doctor';}}
+                onClick={()=>{window.location.href = '/Book-your-mentor';}}
               >
                 Book Now
               </Button>
@@ -110,7 +110,7 @@ const DocProf = () => {
           </div>
         </div>
         <div className=" -mt-40 size-80">
-          <img src="./Images/doctoronprofile.png" />
+          <img src="./Images/mentoronprofile.png" />
         </div>
       </div>
       <Reviews />
@@ -118,4 +118,4 @@ const DocProf = () => {
   );
 };
 
-export default DocProf;
+export default MentProf;

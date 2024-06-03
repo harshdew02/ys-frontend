@@ -115,7 +115,7 @@ function PatientNav() {
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
                 <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar alt="Remy Sharp" src="./Doctor.png" />
+                  <Avatar alt="Remy Sharp" src="./pic1.png" />
                 </IconButton>
               </Tooltip>
               <Menu

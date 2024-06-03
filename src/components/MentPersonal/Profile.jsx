@@ -1,5 +1,5 @@
 import React from "react";
-import DocNav from "./DocNav";
+import MentNav from "./MentNav";
 import { Popover, Typography, useRadioGroup } from "@mui/material";
 import { useAuth } from "../../store/auth";
 const Profile = () => {
@@ -16,7 +16,7 @@ const Profile = () => {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-  const doctor = [
+  const mentor = [
     {
       name: "Sourav",
       lastname: "Kumar",
@@ -92,7 +92,7 @@ const Profile = () => {
   ];
   return (
     <>
-      <DocNav />
+      <MentNav />
       <div className="flex flex-row justify-around  p-5 bg-pink-400 ">
         <div className="w-5/12 bg-white  rounded-3xl sm:mt-5 mt-5 ">
           <div className=" h-fit p-3 rounded-3xl flex flex-col justify-around">
@@ -118,7 +118,7 @@ const Profile = () => {
             </div>
             <div className="flex justify-center">
               <button className="bg-blue-900 text-2xl text-white p-3 rounded-3xl font-bold " onClick={()=>{
-                window.location.href='/Doc-Reg'
+                window.location.href='/Ment-Reg'
               }}>
                 Update
               </button>
@@ -130,7 +130,7 @@ const Profile = () => {
             Appointments
           </div>
           <div className="lg:h-[90vh] h-[70vh] overflow-y-auto">
-            {doctor.map(({ name, lastname, date, time, disease, src }) => (
+            {mentor.map(({ name, lastname, date, time, disease, src }) => (
               <div className="flex flex-col mb-3 ">
                 <div className="flex flex-col px-6 ">
                   <div className=" flex flex-row rounded-3xl border-r-8 border-b-8">

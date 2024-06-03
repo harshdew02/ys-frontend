@@ -105,7 +105,7 @@ const Booking = () => {
           </div>
         </div>
         <div className=" -mt-40 size-80">
-          <img src="./Images/doctoronprofile.png" />
+          <img src="./Images/mentoronprofile.png" />
         </div>
       </div>
     </>

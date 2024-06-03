@@ -16,7 +16,7 @@ export const AuthProvider = ({ children }) => {
   const userAuthentication = async() => {
     try {
       let url = "http://localhost:3000/profile"
-      localStorage.getItem("doctor") === 'true' ? url = "http://localhost:3000/doctor/profile" : url = "http://localhost:3000/profile";
+      localStorage.getItem("mentor") === 'true' ? url = "http://localhost:3000/mentor/profile" : url = "http://localhost:3000/profile";
       // console.log(localStorage.getItem('doctor'))
       // localStorage.getItem('doctor')
       // console.log(checked)

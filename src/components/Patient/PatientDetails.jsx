@@ -22,7 +22,7 @@ function PatientDetails() {
   const open = Boolean(anchorEl);
 
   const id = open ? "simple-popover" : undefined;
-  const doctor = [
+  const mentor = [
     {
       name: " Dr.Sourav",
       lastname: "Kumar",
@@ -107,7 +107,7 @@ function PatientDetails() {
             Appointments
           </div>
           <div className="lg:h-[90vh] h-[70vh] overflow-y-auto">
-            {doctor.map(({ name, lastname, date, time, speacialist, src }) => (
+            {mentor.map(({ name, lastname, date, time, speacialist, src }) => (
               <div className="flex flex-col mb-3 ">
                 <div className="flex flex-col px-6 ">
                   <div className=" flex flex-row rounded-3xl border-r-8 border-b-8">

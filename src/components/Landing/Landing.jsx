@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import Login from "../login/Login";
 
-const pages = ["Doctors Login", "Our Services", "About Us"];
+const pages = ["Mentors Login", "Our Services", "About Us"];
 const settings = ["Profile", "Dashboard", "Logout"];
 
 function Landing() {
@@ -161,8 +161,8 @@ function Landing() {
                       handleCloseNavMenu();
                       // Redirect based on the setting
                       switch (page) {
-                        case "Doctors Login":
-                          window.location.href = "/Doc-Reg";
+                        case "Mentors Login":
+                          window.location.href = "/Ment-Reg";
                           break;
                         case "About Us":
                           window.location.href = "";
