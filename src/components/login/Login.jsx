@@ -14,7 +14,7 @@ const Login = () => {
   const handleChange = (val) => {
     setChecked(val);
   };
-  const [currentImage, setCurrentImage] = useState("Doctor.png");
+  const [currentImage, setCurrentImage] = useState("pic1.png");
   const [user, setUser] = useState('');
   const [pass, setPass] = useState('');
   const {storeToken} = useAuth();
@@ -23,7 +23,7 @@ const Login = () => {
     const interval = setInterval(() => {
       // Update the currentImage state to switch between images
       setCurrentImage((prevImage) =>
-        prevImage === "Doctor.png" ? "Mobile.jpeg" : "Doctor.png"
+        prevImage === "pic1.png" ? "Mobile.jpeg" : "pic1.png"
       );
     }, 5000);
 
@@ -36,14 +36,14 @@ const Login = () => {
     e.preventDefault();
     try {
       let url = "http://localhost:3000/login"
-      checked == true ? url = "http://localhost:3000/doctor/login" : url = "http://localhost:3000/login"
+      checked == true ? url = "http://localhost:3000/mentor/login" : url = "http://localhost:3000/login"
 
       axios.post(url, { username:user, password:pass }).then((response)=>{
         const token  = response.data;
         storeToken(token.token)
-        localStorage.setItem('doctor',checked);
+        localStorage.setItem('mentor',checked);
         //Route to home page after successful login
-        checked == true ? window.location.href = './Doctor-Profile' : window.location.href = './home'
+        checked == true ? window.location.href = './Mentor-Profile' : window.location.href = './home'
         // window.location.href = '/PatientDetails'
       }).catch((err)=>{console.log(err)});
       
@@ -61,7 +61,7 @@ const Login = () => {
         <div className="w-1/5 bg-blue-800 h-screen">
           <img
             className="transition-opacity duration-1000 ease-in-out opacity-100 h-full w-full"
-            src={`./${currentImage}`}
+            src={`./pic1.png`}
             alt=""
           />
         </div>
@@ -95,11 +95,11 @@ const Login = () => {
           <div className="-mt-[3%] mb-8 ml-[6%]">
             <div className="text-wrap text-2xl font-thin font-serif text-gray-400">
               Your one stop destination for finding{" "}
-              <b className="text-black">doctors</b>
+              <b className="text-black">mentors</b>
             </div>
             <div className="app mt-4 flex flex-row" style={{ textAlign: "center" }}>
               <ReactSwitch className="ml-[30%] mt-[0%]" checked={checked} onChange={handleChange} />
-              <span className="ml-[3%] text-lg text-blue-800 font-medium">For Doctor</span>
+              <span className="ml-[3%] text-lg text-blue-800 font-medium">For Mentor</span>
             </div>
           </div>
 

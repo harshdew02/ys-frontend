@@ -5,7 +5,7 @@ import { useAuth } from "../../store/auth";
 
 import Dropdown from "./Dropdown";
 
-const Doctorreg = () => {
+const Mentorreg = () => {
   const {user} = useAuth();
   return (
     <>
@@ -18,7 +18,7 @@ const Doctorreg = () => {
         
       </div>
       <div className="text-center text-3xl p-6 font-serif">
-        Welcome to Sanjeevani-<b>Doctors Portal</b>
+        Welcome to Sanjeevani-<b>Mentors Portal</b>
       </div>
 
       <div className="flex flex-row justify-around">
@@ -39,7 +39,7 @@ const Doctorreg = () => {
                 className="w-3/4 h-14 rounded-3xl text-xl bg-blue-100 pl-3"
                 type="text"
                 value={user.username}
-                placeholder="Doctor ID"
+                placeholder="Mentor ID"
               ></input>
             </div>
             <div className="flex sm:flex-row flex-col">
@@ -77,7 +77,7 @@ const Doctorreg = () => {
             <Avatar
               style={{ width: "125px", height: "125px" }}
               alt="No image"
-              src="./Doctor.png"
+              src="./pic1.png"
             />
           </div>
           <div className="mt-3">
@@ -109,4 +109,4 @@ const Doctorreg = () => {
   );
 };
 
-export default Doctorreg;
+export default Mentorreg;

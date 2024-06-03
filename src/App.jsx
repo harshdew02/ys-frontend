@@ -11,14 +11,14 @@ import './App.css';
 import Login from './components/login/Login';
 import Landing from './components/Landing/Landing';
 import Home from './components/home/Home';
-import DocProf from './components/docprofile/DocProf';
+import MenProf from './components/menprofile/MenProf';
 import PatientNav from './components/Patient/PatientNav';
 import PatientDetails from './components/Patient/PatientDetails';
 import Booking from './components/Booking/Booking';
-import Doctorreg from './components/doctorreg/Doctorreg';
+import Mentorreg from './components/mentorreg/Mentorreg';
 import Disease from './components/Disease/Disease';
 import Footer from './components/home/Footer';
-import Profile from './components/DocPersonal/Profile';
+import Profile from './components/MenPersonal/Profile';
 import NearYou from './components/home/NearYou';
 
 
@@ -48,24 +48,24 @@ const router = createBrowserRouter([
       element:<PatientDetails/>
     },
     {
-      path: "Doctors",
-      element:<DocProf/>
+      path: "Mentors",
+      element:<MenProf/>
     },
 
   {
-    path: "Book-your-doctor",
+    path: "Book-your-mentor",
     element: <Booking/>
   },
   {
-    path: "Doc-Reg",
-    element: <Doctorreg/>
+    path: "Men-Reg",
+    element: <Mentorreg/>
   },
   {
     path: "Disease",
     element: <Disease/>
   },
   {
-    path: "Doctor-Profile",
+    path: "Mentor-Profile",
     element: <Profile/>
   },
 

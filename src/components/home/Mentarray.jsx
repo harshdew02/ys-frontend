@@ -1,30 +1,30 @@
 import React from "react";
 
-function Docarray() {
-  const doctor = [
+function Mentarray() {
+  const mentor = [
     {
       name: "Sourav",
       lastname: "Kumar",
       specialist: "Neuroscience",
-      src: "./Doctor.png",
+      src: "./Mentor.png",
     },
     {
       name: "Yash",
       lastname: "Kumar",
       specialist: "Cardiology",
-      src: "./Doctor.png",
+      src: "./Mentor.png",
     },
     {
       name: "Tathagat",
       lastname: "Kumar",
       specialist: "Surgeon",
-      src: "./Doctor.png",
+      src: "./Mentor.png",
     },
     {
       name: "Priya",
       lastname: "Kumar",
       specialist: "Gynecologist",
-      src: "./Doctor.png",
+      src: "./Mentor.png",
     },
   ];
 
@@ -32,10 +32,10 @@ function Docarray() {
     <>
       <div className="flex flex-col -mt-[15%]">
         <div className="p-4 ml-[11%]">
-          <img className="size-[20%]" src="./Images/doctorsnearyou.png" />
+          <img className="size-[20%]" src="./Images/Mentorsnearyou.png" />
         </div>
         <div className="flex flex-col mb-10">
-          {doctor.map((details) => (
+          {mentor.map((details) => (
             <div
               className="shadow-xl bg-white shadow-slate-400 border-b-4 border-blue-950 rounded-3xl mb-5 ml-[12%] mr-10 p-5 w-3/4 flex flex-row items-center"
               key={details.name}
@@ -60,7 +60,7 @@ function Docarray() {
                   className="sm:size-8 size-5 hover:cursor-pointer"
                   src="./Images/arrow.png"
                   onClick={() => {
-                    window.location.href = "/Doctors";
+                    window.location.href = "/Mentors";
                   }}
                 />
               </div>
@@ -68,11 +68,11 @@ function Docarray() {
           ))}
         </div>
         <div className="ml-[45%] mb-[2%]">
-          <p className="text-xl text-blue-500 font-semibold">See All Doctors</p>
+          <p className="text-xl text-blue-500 font-semibold">See All Mentors</p>
         </div>
       </div>
     </>
   );
 }
 
-export default Docarray;
+export default Mentarray;

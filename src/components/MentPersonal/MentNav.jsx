@@ -16,7 +16,7 @@ import { Popover } from "@mui/material";
 
 const settings = ["Profile", "Dashboard", "Logout"];
 
-function DocNav() {
+function MentNav() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -46,7 +46,7 @@ function DocNav() {
 
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-  const doctor = [
+  const mentors = [
     {
       name: "Sourav",
       lastname: "Kumar",
@@ -220,7 +220,7 @@ function DocNav() {
                           </div>
                         </div>
                         <div className="flex flex-col mt-16">
-                        {doctor.map(({name,lastname,src,time,disease})=>(
+                        {mentors.map(({name,lastname,src,time,disease})=>(
 
                         
                         <div className="sm:-mt-11 mr-1 ml-1 mb-1 mt-0 overflow-auto text-wrap">
@@ -263,7 +263,7 @@ function DocNav() {
                   </div>
                   <Tooltip title="Open settings">
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                      <Avatar alt="Remy Sharp" src="./Doctor.png" />
+                      <Avatar alt="Remy Sharp" src="./pic1.png" />
                     </IconButton>
                   </Tooltip>
                 </div>
@@ -298,4 +298,4 @@ function DocNav() {
   );
 }
 
-export default DocNav;
+export default MentNav;
